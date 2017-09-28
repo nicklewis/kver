@@ -24,7 +24,11 @@ class KVApp < Sinatra::Base
   put '/kv/:key' do
     value = JSON.parse(request.body.read)
     settings.kvs[params[:key]] = value
-    puts Thread.current
+    204
+  end
+
+  delete '/kv/:key' do
+    settings.kvs.delete(params[:key]
     204
   end
 end

@@ -28,7 +28,7 @@ class KVApp < Sinatra::Base
   end
 
   delete '/kv/:key' do
-    settings.kvs.delete(params[:key]
+    settings.kvs.delete(params[:key])
     204
   end
 end

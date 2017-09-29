@@ -1,6 +1,5 @@
 require 'json'
 require 'sinatra/base'
-require 'pp'
 
 class KVApp < Sinatra::Base
   set :kvs, {}
